@@ -1,0 +1,17 @@
+---
+import { Image } from 'astro:assets';
+import coffeewithplant from '../../public/img/coffeewithplant.webp';
+import coffeewithplant2 from '../../public/img/coffeewithplant2.webp';
+import coffeewithtetera from '../../public/img/coffeewithtetera.webp';
+import News from './News.astro';
+---
+
+<section class="flex px-5 sm:px-5 md:px-10 lg:px-[60px] flex-col mb-[73px]">
+    <h2 class="mb-20 text-[42px] font-poppins-semibold leading-custom-tight-1.2 font-bold">Latest coffee news</h2>
+    
+    <div class="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
+        <News img={coffeewithplant} fecha="Mar 15, 2024" description="Exploring the World of Coffee Origins"/>
+        <News img={coffeewithtetera} fecha="Feb 28, 2024" description="5 Ways to Elevate your Coffee Experience at Home"/>
+        <News img={coffeewithplant2} fecha="Feb 6, 2024" description="Eco-Friendly Practices at Latte Haven"/>
+    </div>
+</section>

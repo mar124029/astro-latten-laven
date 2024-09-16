@@ -1,0 +1,17 @@
+[  { 
+    "img": "/img/center.webp",
+    "label": "Latte"
+   },
+   {
+    "img": "/img/specialty_Lattes.webp",
+    "label": "Chai Latte"
+   },
+   {
+    "img": "/img/left.webp",
+    "label": "Hot Chocolate"
+   },
+   {
+    "img": "/img/croissant.webp",
+    "label": "Croissant"
+   }
+]

@@ -1,0 +1,41 @@
+---
+import { Image } from "astro:assets";
+import right2 from '../../public/img/right2.webp';
+import Logo from '../../public/img/Logo.webp';
+---
+
+<section class="px-5 sm:px-5 md:px-10 lg:px-[60px] mb-20">
+    <div class="w-full h-full grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2
+    
+    bg-page-highlightcolor p-6 rounded-[56px] ">
+     <Image 
+     src={right2} 
+     alt="Image about local/restaurant" 
+     class="h-[320px] sm:h-[320px] lg:w-full md:h-full lg:h-full rounded-[32px] " loading="lazy"/>
+     <div class="flex flex-col justify-between lg:items-start md:items-start
+     ml-10 mr-6 mt-10 sm:mt-10 md:mt-0 lg:mt-0 items-center sm:items-center">
+        <Image  src={Logo}  alt="Logo de la Página" width="68" height="53" 
+        loading="lazy"/>
+        <h2 class="mt-6 text-[42px] font-poppins-semibold 
+        leading-custom-tight-1.2 font-bold 
+        text-center sm:text-center md:text-left">We love coffee</h2>
+        <p class="my-8 text-base font-poppins-medium font-medium leading-[1.3em]
+         text-center sm:text-center md:text-left">
+            Latte Haven is a cozy and welcoming spot in the heart of the city, offering a delightful selection of specialty coffees, fresh pastries, and wholesome meals. 
+            <br>
+            <br>
+            Join us for a moment of relaxation and indulgence</p>
+        <p class="mb-8 text-base font-poppins-medium font-medium leading-[1.3em]
+         text-center sm:text-center md:text-left">
+            <b class="text-lg">Location:</b>
+            <br>
+            <br>
+            Latte Haven <br> 
+            123 Latte Lane <br> 
+            Food City, FC 12345
+        </p>
+        <button class=" bg-black text-white text-custom-16 leading-custom-tight-1.2 py-4 px-8 rounded-3xl transform transition-transform duration-300 hover:scale-95
+        font-poppins-semibold font-semibold text-base">Explore menu</button>
+    </div>
+    </div>
+</section>

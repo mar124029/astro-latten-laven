@@ -1,0 +1,15 @@
+---
+import { Image } from 'astro:assets';
+const { img, fecha, description } = Astro.props;
+---
+<div class="cursor-pointer transform transition-transform duration-300 hover:scale-95">
+    <Image class="object-cover w-full h-[60vh] sm:h-[60vh] xl:h-[508px] lg:h-[308px] rounded-[32px]" 
+    src={img} 
+    alt="A coffee with plant" 
+    loading="lazy"/>
+    <div class="p-6">
+        <p class="text-base font-poppins-medium font-medium leading-[1.3em] mb-[10px]">{fecha}</p>
+        <h3 class="w-10/12 text-2xl font-poppins-semibold leading-[1.4em] font-semibold">{description}</h3>        
+    </div>
+</div>
+

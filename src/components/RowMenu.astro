@@ -1,0 +1,28 @@
+---
+const { menudata,namecategory, isReverse, img,label,alt } = Astro.props;
+---
+
+<div class=`w-full flex flex-col sm:flex-col lg:flex-row  justify-items-center items-start 
+ gap-x-4 mt-10 md:mt-10 lg:mt-20 ${isReverse ? 'flex-row-reverse' : ''}`>
+    <div class=" sm:w-full md:w-full lg:w-[700px] h-full bg-page-highlightcolor 
+    sm:pt-10 pt-10 lg:pt-14 p-6 ms:p-6 lg:p-10  rounded-[32px] mb-6 sm:mb-6 md:mb-10 lg:mb-0">
+        <h3 class="text-2xl font-poppins-semibold leading-[1.4em] font-semibold">{namecategory}</h3>
+        {menudata.map((item) => (
+          <div class="menu-item mt-10">
+            <div class="flex justify-between mb-2">
+              <h5 class="text-lg font-poppins-regular font-bold">{item.name}</h5>
+              <p class="text-lg font-poppins-regular font-bold">{item.price}</p>
+            </div>
+            <p class="text-base font-poppins-medium font-medium leading-[1.3em]">{item.description}</p>
+          </div>
+        ))}
+    </div>
+    <div class="sm:w-full md:w-full lg:w-[700px] relative">
+        <img class="w-full sm:w-full sm:h-full lg:w-[700px] 
+        rounded-[32px] object-cover" src={img} alt={alt} loading="lazy">
+        <span class="absolute top-6 left-6 bg-[#FFFBF2]/80 border-4 border-[#FFF5E0]/80 px-4 py-3 rounded-full 
+        text-base font-poppins-medium font-extrabold leading-[1.3em]">
+    {label}
+  </span>
+    </div>
+</div>
